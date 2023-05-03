@@ -6,12 +6,13 @@ import com.alen.data.Train;
 import com.alen.logic.ApplicationServiceBuilder;
 import com.alen.logic.TrainTicketSystem;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         ApplicationServiceBuilder serviceBuilder = new ApplicationServiceBuilder();
         List<Train> trains = serviceBuilder.getTrains();
         List<Passenger> passengers = serviceBuilder.getPassengers();

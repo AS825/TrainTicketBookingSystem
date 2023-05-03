@@ -4,7 +4,9 @@ import com.alen.data.Booking;
 import com.alen.data.Passenger;
 import com.alen.data.Train;
 import com.alen.data.TrainTypes;
+import com.alen.io.Filewriter;
 
+import java.io.FileNotFoundException;
 import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -43,11 +45,13 @@ public class TrainTicketSystem {
     }
 
 
-    public Map<String, Integer> getBookingsForTrains() {
+    public Map<String, Integer> getBookingsForTrains() throws FileNotFoundException {
+        Filewriter filewriter = new Filewriter();
         Map<String, Integer> trainMap = new HashMap<>();
          for (Train train : trains) {
              trainMap.put(train.getName(), getBookingForTrain(train));
         }
+         filewriter.createPieChart(trainMap);
         return trainMap;
     }
 
