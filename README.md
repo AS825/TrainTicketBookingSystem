@@ -1,7 +1,8 @@
 # TrainTicketBookingSystem
-# Readme
 
-This Java program demonstrates the usage of the `TrainTicketSystem` class from the `com.alen.logic` package. The `TrainTicketSystem` class provides methods to query information about trains, passengers, and bookings.
+![Piechart](pieChart.png)
+
+This Java program demonstrates the usage of the `TrainTicketSystem` class from the `com.alen.logic` package. The `TrainTicketSystem` class provides methods to query information about trains, passengers, and bookings.and provides statics using google charts to write a HTML File while calculating the workload of the booked trains simultaneously.
 
 ## Getting Started
 
